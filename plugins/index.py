@@ -73,7 +73,7 @@ async def gen_link_batch(bot, message):
         try:
             file_type = msg.media
             file = getattr(msg, file_type)
-            caption = getattr(msg, 'caption', '')
+            caption = msg.caption
             if caption:
                 caption = caption.html
             if file:
